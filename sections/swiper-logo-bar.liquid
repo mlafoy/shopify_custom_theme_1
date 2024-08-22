@@ -1,0 +1,305 @@
+{{ 'swiper-bundle.min.css' | asset_url | stylesheet_tag }}
+{{ 'swiper-logo-bar.css' | asset_url | stylesheet_tag }}
+
+{% style %}
+  .section-{{ section.id }}-style {
+    background: {{ section.settings.background | default: 'transparent' }};
+    padding: 30px 0;
+  }
+
+  @media screen and (min-width: 750px){
+    .section-{{ section.id }}-style {
+        padding-bottom: 0;
+    }
+  }
+{% endstyle %}
+
+<div class="section-{{ section.id }}-style">
+  <div class="page-width">
+    {% if section.settings.title != blank %}
+      <div class="section-header text-center">
+        <h2>{{ section.settings.title | escape }}</h2>
+      </div>
+    {% endif %}
+
+    {% if section.blocks.size > 0 %}
+      <div class="small--hide large-view-logo">
+        <ul
+          class="logo-bar{% if section.settings.title_enable %} logo-bar--large{% endif %}"
+        >
+          {% for block in section.blocks %}
+            <li
+              class="logo-bar__item{% if section.settings.title_enable %} logo-bar__item--large{% endif %}"
+              {{ block.shopify_attributes }}
+            >
+              {% if block.settings.link != blank %}
+                <a href="{{ block.settings.link }}" class="logo-bar__link">
+              {% endif %}
+              {% if block.settings.image != blank %}
+                {{
+                  block.settings.image
+                  | img_url: '160x160', scale: 2
+                  | img_tag: block.settings.image.alt, 'logo-bar__image'
+                }}
+              {% else %}
+                {{ 'logo' | placeholder_svg_tag: 'placeholder-svg' }}
+              {% endif %}
+              {% if block.settings.link != blank %}
+                </a>
+              {% endif %}
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+
+      <swiper-logo-bar class="medium-up--hide mobile-view-logo" data-section-id="{{ section.id }}">
+        <!-- Slider main container -->
+        <div class="swiper">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            {% for block in section.blocks %}
+              <div class="swiper-slide" {{ block.shopify_attributes }}>
+                {% if block.settings.link != blank %}
+                  <a href="{{ block.settings.link }}" class="logo-bar__link">
+                {% endif %}
+                {% if block.settings.image != blank %}
+                  {{
+                    block.settings.image
+                    | img_url: '160x160', scale: 2
+                    | img_tag: block.settings.image.alt, 'logo-bar__image'
+                  }}
+                {% else %}
+                  {{ 'logo' | placeholder_svg_tag: 'placeholder-svg' }}
+                {% endif %}
+                {% if block.settings.link != blank %}
+                  </a>
+                {% endif %}
+              </div>
+            {% endfor %}
+          </div>
+
+          <!-- If we need pagination -->
+          <div class="swiper-pagination"></div>
+
+          <!-- If we need scrollbar -->
+          <div class="swiper-scrollbar"></div>
+        </div>
+      </swiper-logo-bar>
+    {% endif %}
+
+    {% if section.blocks.size == 0 %}
+      {% include 'no-blocks' %}
+    {% endif %}
+  </div>
+</div>
+
+<script data-src="{{ 'swiper-bundle.min.js' | asset_url }}" data-package="package-swiper"></script>
+<script data-src="{{ 'swiper-logo-bar.js' | asset_url }}" data-package="swiper-logo-bar"></script>
+<script>
+  theme.loadPackages(['package-swiper', 'swiper-logo-bar']);
+</script>
+
+{% schema %}
+{
+  "name": "Swiper Logo Bar",
+  "class": "index-section",
+  "max_blocks": 20,
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": {
+        "da": "Overskrift",
+        "de": "Titel",
+        "en": "Heading",
+        "es": "Título",
+        "fi": "Otsake",
+        "fr": "En-tête",
+        "hi": "शीर्षक",
+        "it": "Heading",
+        "ja": "見出し",
+        "ko": "제목",
+        "ms": "Tajuk",
+        "nb": "Overskrift",
+        "nl": "Kop",
+        "pt-BR": "Título",
+        "pt-PT": "Título",
+        "sv": "Rubrik",
+        "th": "ส่วนหัว",
+        "zh-CN": "标题",
+        "zh-TW": "標題"
+      },
+      "default": {
+        "da": "Logoliste",
+        "de": "Logo-Liste",
+        "en": "Logo list",
+        "es": "Lista de logotipos",
+        "fi": "Logoluettelo",
+        "fr": "Liste de logos",
+        "hi": "लोगो सूची",
+        "it": "Elenco loghi",
+        "ja": "ロゴリスト",
+        "ko": "로고 목록",
+        "ms": "Senarai logo",
+        "nb": "Logoliste",
+        "nl": "Logolijst",
+        "pt-BR": "Lista de logotipos",
+        "pt-PT": "Lista de logótipos",
+        "sv": "Logotyplista",
+        "th": "รายการโลโก้",
+        "zh-CN": "logo 列表",
+        "zh-TW": "標誌清單"
+      }
+    },
+    {
+      "type": "header",
+      "content": "Color"
+    },
+    {
+      "type": "color",
+      "id": "background",
+      "label": "Background"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "logo_image",
+      "name": {
+        "da": "Logo",
+        "de": "Logo",
+        "en": "Logo",
+        "es": "Logotipo",
+        "fi": "Logo",
+        "fr": "Logo",
+        "hi": "लोगो",
+        "it": "Logo",
+        "ja": "ロゴ",
+        "ko": "로고",
+        "ms": "Logo",
+        "nb": "Logo",
+        "nl": "Logo",
+        "pt-BR": "Logotipo",
+        "pt-PT": "Logótipo",
+        "sv": "Logotyp",
+        "th": "โลโก้",
+        "zh-CN": "logo",
+        "zh-TW": "商標"
+      },
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": {
+            "da": "Billede",
+            "de": "Foto",
+            "en": "Image",
+            "es": "Imagen",
+            "fi": "Kuva",
+            "fr": "Image",
+            "hi": "इमेज",
+            "it": "Immagine",
+            "ja": "画像",
+            "ko": "이미지",
+            "ms": "Imej",
+            "nb": "Bilde",
+            "nl": "Afbeelding",
+            "pt-BR": "Imagem",
+            "pt-PT": "Imagem",
+            "sv": "Bild",
+            "th": "รูปภาพ",
+            "zh-CN": "图片",
+            "zh-TW": "圖片"
+          }
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": {
+            "da": "Link",
+            "de": "Link",
+            "en": "Link",
+            "es": "Enlace",
+            "fi": "Linkki",
+            "fr": "Lien",
+            "hi": "लिंक",
+            "it": "Link",
+            "ja": "リンク",
+            "ko": "링크",
+            "ms": "Pautan",
+            "nb": "Kobling",
+            "nl": "Link",
+            "pt-BR": "Link",
+            "pt-PT": "Ligação",
+            "sv": "Länk",
+            "th": "ลิงก์",
+            "zh-CN": "链接",
+            "zh-TW": "連結"
+          },
+          "info": {
+            "da": "Valgfri",
+            "de": "Optional",
+            "en": "Optional",
+            "es": "Opcional",
+            "fi": "Valinnainen",
+            "fr": "Facultatif",
+            "hi": "वैकल्पिक",
+            "it": "Facoltativo",
+            "ja": "選択させる",
+            "ko": "선택 사항",
+            "ms": "Opsyenal",
+            "nb": "Valgfritt",
+            "nl": "Optioneel",
+            "pt-BR": "Opcional",
+            "pt-PT": "Opcional",
+            "sv": "Valfritt",
+            "th": "ไม่จำเป็น",
+            "zh-CN": "可选",
+            "zh-TW": "(選填)"
+          }
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Swiper Logo Bar",
+      "category": {
+        "da": "Billede",
+        "de": "Foto",
+        "en": "Image",
+        "es": "Imagen",
+        "fi": "Kuva",
+        "fr": "Image",
+        "hi": "इमेज",
+        "it": "Immagine",
+        "ja": "画像",
+        "ko": "이미지",
+        "ms": "Imej",
+        "nb": "Bilde",
+        "nl": "Afbeelding",
+        "pt-BR": "Imagem",
+        "pt-PT": "Imagem",
+        "sv": "Bild",
+        "th": "รูปภาพ",
+        "zh-CN": "图片",
+        "zh-TW": "圖片"
+      },
+      "blocks": [
+        {
+          "type": "logo_image"
+        },
+        {
+          "type": "logo_image"
+        },
+        {
+          "type": "logo_image"
+        },
+        {
+          "type": "logo_image"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

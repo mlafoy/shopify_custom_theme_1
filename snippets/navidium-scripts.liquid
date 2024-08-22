@@ -1,0 +1,69 @@
+
+{% comment %}
+<!-- navidium script start -->
+ <script>
+    const nvdShop = 'sun-valley-saunas.myshopify.com';
+    const nvdShopCurrency = '{{ shop.money_with_currency_format | strip_html }}';
+    const nvdControls = {
+      subtotal_item: '[data-cart-subtotal]',
+      CheckoutBtns: '[name="checkout"]',
+      clickTriggers: '.cart__remove, .cart__remove *',
+      changeTrigger: '.cart__qty-input',
+	    cursorControl: '.nvd-mini',
+      showConsoleMessage: false,
+      iosDeviceListener:'click',
+      trackWidget: false,
+      forceClick: true,
+      forceCheckout: false,
+      redirectCheckout: {
+        upsaleOff: false,
+        noProtection: false
+      },
+		  nvdInject:{
+        status:false, // Inject nvd-mini div
+        parent:'parent_class', // parent class for nvd-mini div
+        container:'checkout_button_div' // nvd-mini will added before this div/button
+      }
+    }
+  </script>
+ <script  src="https://navidium-static-assets.s3.amazonaws.com/navidium-widgets/js/nvd-js-asset.js"></script>
+<script src="https://navidium-static-assets.s3.amazonaws.com/navidium-widgets/js/nvd-widget-v-jquery.js" defer></script>
+<!-- navidium script end -->
+{% endcomment %}
+
+<!-- Navidium script start -->
+<style>tr.cart__row:has([href*="navidium"]) {
+    display: none;
+}</style>
+    <script>
+      const nvdShop = 'sun-valley-saunas.myshopify.com';
+      const nvdShopCurrency = '{{ shop.money_with_currency_format | strip_html }}';
+      const nvdControls = {
+        cartCounter: 'cart_counter_class', //cart item count
+        subtotal: '[data-cart-subtotal]', // cart subtotal amount
+        lineAttribute: 'data-index', // cart item line
+        cartItemNodes: 'cart_nodes', // Cart items loop
+        quantityMinus: 'qty_minus', // Quantity decrase button
+        quantityPlus: 'qty_plus', // Quantity incrase button
+        removeItem: 'cart_remove_class', // Cart item remove btn class
+        qtybtnAttribute: 'data-href', // Cart item btn line update
+        qtyrmvAttribute: 'href', // Cart item remove line update
+        clickTriggers: '.cart__remove, .cart__remove *', // Onclick widget update
+        changeTrigger: 'onchange_input_class_here', // Onchange widget update
+  	    cursorControl: '.nvd-mini', // Disabled/Enabled cursor pointer event
+        onLoadTrigger: false, // window.onload nvd_init function call
+        cartReload: true, // Cart reload for /cart page
+        showConsoleMessage:false, // Console message show/hide
+        trackWidget:false, // Track widget on realtime
+        forceClick: true, // forceclick for onclickTrigger event
+        autoHide: false, // Hide by JS according to cartItemNodes
+        initiateTime: 2000, //milisecond
+        nvdInject:{
+          status:false, // Inject nvd-mini div
+          parent:'parent_class', // parent class for nvd-mini div
+          container:'checkout_button_div' // nvd-mini will added before this div/button
+        }
+      }      
+    </script>
+<script src="https://navidium-static-assets.s3.amazonaws.com/navidium-widgets/js/nvd-widget-stable-1.js" defer></script>
+<!-- End of Navidium script -->

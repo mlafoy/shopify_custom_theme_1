@@ -1,0 +1,19 @@
+.large-view-logo .logo-bar {
+    padding: 10px 0 !important;
+    margin-bottom: 2rem;
+  }
+  .logo-bar img {
+    border: 1px solid #ccc;
+  }
+
+  .mobile-view-logo .logo-bar__item {
+    max-width: 100%;
+    margin: 0;
+  }
+
+  @media screen and (min-width: 767px) {
+    .large-view-logo .logo-bar__item {
+        max-width: 260px;
+      }
+  }
+  

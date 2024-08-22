@@ -1,0 +1,91 @@
+<div class="main_sun_review">
+  <h1 class="review_header">{{ section.settings.review_header }}</h1>
+  <div class="content_block">
+    <div class="customer_review">
+      {% for block in section.blocks %}
+      <div class="review_box">
+        <div class="upper_block">
+          <img src="{{ block.settings.upper_block_img | img_url: '100x20' }}">
+          <span class="review_date">{{ block.settings.review_date }}</span>
+        </div>
+        <div class="middle_block">
+          <h4 class="review_title">{{ block.settings.review_title }}</h4>
+          <p class="review_description">{{ block.settings.review_description }}</p>
+          <p class="review_author">-{{ block.settings.review_by }}</p>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    <div class="img" style="text-align: center;border-top: 1px solid lightgray;padding-top: 10px;">
+      <p>{{ section.settings.review_footer }}</p>
+      <img style="margin: auto;object-fit: cover" src="{{ section.settings.footer_img | img_url: 'master' }}">
+    </div>
+  </div>
+</div>
+{% schema %}
+  {
+    "name": "Sun Reviews",
+	"class": "sun_reviews_section",
+    "settings": [
+			{
+				"type": "text",
+				"id": "review_header",
+				"label": "Add Header"
+			},
+			{
+				"type": "text",
+				"id": "review_footer",
+				"label": "Add Footer"
+			},
+			{
+				"type": "image_picker",
+				"id": "footer_img",
+				"label": "Footer image"
+			}
+	],
+	"blocks": [
+		{
+			"type": "Review_Home",
+			"name": "Add Review",
+			"settings": [
+					{
+						"type": "image_picker",
+						"id": "upper_block_img",
+						"label": "Add review star image"
+					},
+					{
+						"type": "text",
+						"id": "review_date",
+						"label": "Add Review Date"
+					},
+					{
+						"type": "text",
+						"id": "review_title",
+						"label": "Add Review Title"
+					},
+					{
+						"type": "text",
+						"id": "review_description",
+						"label": "Add Review Description"
+					},
+					{
+						"type": "text",
+						"id": "review_by",
+						"label": "Review By"
+					}
+			]
+		}
+	],
+	"presets": [
+		{
+			"name": "Sun Reviews Section"
+		}
+	]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

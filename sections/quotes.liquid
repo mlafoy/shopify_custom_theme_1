@@ -1,0 +1,360 @@
+<div class="page-width" data-section-id="{{ section.id }}" data-section-type="quotes">
+  {% if section.settings.title != blank %}
+    <div class="section-header text-center">
+      <h2>{{ section.settings.title | escape }}</h2>
+    </div>
+  {% endif %}
+
+  {% if section.blocks.size > 0 %}
+    <div class="quotes-wrapper cst">
+      <div class="quotes-slider" id="Quotes-{{ section.id }}" data-count="{{ section.blocks.size }}">
+        {% for block in section.blocks %}
+          <div class="quotes-slide--{{ block.id }}" {{ block.shopify_attributes }}>
+            <blockquote class="quotes-slider__text text-center">
+              <span class="quote-icon">
+                {% comment %}{% include 'icon-quote' %}{% endcomment %}
+              	<img width="44" height="44" style="margin: auto;border-radius: 22px;object-fit: cover" {% if block.settings.author_img != blank %}src="{{ block.settings.author_img | img_url: 'master' }}"{% else %}
+                     src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAASABIAAD/4QBMRXhpZgAATU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAC0KADAAQAAAABAAAC0AAAAAD/7QA4UGhvdG9zaG9wIDMuMAA4QklNBAQAAAAAAAA4QklNBCUAAAAAABDUHYzZjwCyBOmACZjs+EJ+/8IAEQgC0ALQAwERAAIRAQMRAf/EAB8AAAEFAQEBAQEBAAAAAAAAAAMCBAEFAAYHCAkKC//EAMMQAAEDAwIEAwQGBAcGBAgGcwECAAMRBBIhBTETIhAGQVEyFGFxIweBIJFCFaFSM7EkYjAWwXLRQ5I0ggjhU0AlYxc18JNzolBEsoPxJlQ2ZJR0wmDShKMYcOInRTdls1V1pJXDhfLTRnaA40dWZrQJChkaKCkqODk6SElKV1hZWmdoaWp3eHl6hoeIiYqQlpeYmZqgpaanqKmqsLW2t7i5usDExcbHyMnK0NTV1tfY2drg5OXm5+jp6vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAQIAAwQFBgcICQoL/8QAwxEAAgIBAwMDAgMFAgUCBASHAQACEQMQEiEEIDFBEwUwIjJRFEAGMyNhQhVxUjSBUCSRoUOxFgdiNVPw0SVgwUThcvEXgmM2cCZFVJInotIICQoYGRooKSo3ODk6RkdISUpVVldYWVpkZWZnaGlqc3R1dnd4eXqAg4SFhoeIiYqQk5SVlpeYmZqgo6SlpqeoqaqwsrO0tba3uLm6wMLDxMXGx8jJytDT1NXW19jZ2uDi4+Tl5ufo6ery8/T19vf4+fr/2wBDAAEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQH/2wBDAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQH/2gAMAwEAAhEDEQAAAf24rVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1V9U1VtM6FWo9PKs6uae1q1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atUVz9cxVfWrVq1atWrVqtK6mrutWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atVdXE1XVq1atWrVq1atWrVqt67WnlatWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVztcXSa1atWrVq1atWrVq1atRa7mrqtWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrmK46tWrVq1atWrVq1atWrVq1apruavq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVqoK4atWrVq1atWrVq1atWrVq1atWpVeg1a1q1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atTOvN6HWrVq1atWrVq1atWrVq1atWrVqc16TRq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atXAVTVq1atWrVq1atWrVq1atWrVq1atWrpK7StWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWqprz2tWrVq1atWrVq1atWrVq1atWrVq1apr0unlatWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1auEqirVq1atWrVq1atWrVq1atWrVq1atWrV1FdhWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atQ68upFatWrVq1atWrVq1atWrVq1atWrVq1anVenVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVT15/WrVq1atWrVq1atWrVq1atWrVq1atWrVq9Lp7WrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1auXrj61atWrVq1atWrVq1atWrVq1atWrVq1atXd1e1q1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrjK5qtWrVq1atWrVq1atWrVq1atWrVq1atWrV2FdRWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1auIrnq1atWrVq1atWrVq1atWrVq1atWrVq1atXWV1latWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq4iuerVq1atWrVq1atWrVq1atWrVq1atWrVq1dZXWVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWriK56tWrVq1atWrVq1atWrVq1atWrVq1atWrV1ldZWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1auIrnq1atWrVq1atWrVq1atWrVq1atWrVq1atXWV1latWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq4iuerVq1atWrVq1atWrVq1atWrVq1atWrVq1dZXWVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWriK56tWrVq1atWrVq1atWrVq1atWrVq1atWrV1ldZWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1auIrnq1atWrVq1atWrVq1atWrVq1atWrVq1atXWV1latWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq4iuerVq1atWrVq1atWrVq1atWrVq1atWrVq1dZXWVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWriK56tWrVq1atWrVq1atWrVq1atWrVq1atWrV1ldZWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1auIrnq1atWrVq1atWrVq1atWrVq1atWrVq1atXWV1latWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq4iuerVq1atWrVq1atWrVq1atWrVq1atWrVq1dZXWVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWriK56tWrVq1atWrVq1atWrVq1atWrVq1atWrV1ldZWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1auNrma1atWrVq1atWrVq1atWrVq1atWrVq1atXY109atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq5muNrVq1atWrVq1atWrVq1atWrVq1atWrVq1d5V5WrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1aqqvPK1atWrVq1atWrVq1atWrVq1atWrVq1atXp1Oq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrUmvLqFWrVq1atWrVq1atWrVq1atWrVq1atWp9XpVatWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1auIrnq1atWrVq1atWrVq1atWrVq1atWrVq1dZXWVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVqrq84rVq1atWrVq1atWrVq1atWrVq1atWpdem04rVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq4aqCtWrVq1atWrVq1atWrVq1atWrVq1dVXXVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1am9eb03rVq1atWrVq1atWrVq1atWrVq1Pq9HpdatWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVUVwFJrVq1atWrVq1atWrVq1atWrUWvRKf1q1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVQ1w1RWrVq1atWrVq1atWrVq1aiV31W1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atVNXDUGtWrVq1atWrVq1atWrU6rvKsq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWprXGVSVq1atWrVq1atWrVq6Kuwo1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1aqmuYqlqK1atWrVq1Lq8rqKsa1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrUCqiq2mdCrUenlWdW1FrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atQqa03oVIqKitWrUSrql1q1atWrVq1atWrVqFVLSa1atU0ql0WnFOqJWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1ah1Q1S1WU2rVq1atWrVq1aj10NX1WNTWrVq1atWqKq6oKoKFWrVq1atWrVq1O6tKu6u6XWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1ahVy9czQq1atWrVq1atWrVq1atWo9WdPqc0WooVNaY1WUKtWrVq1atWrVq1atWrVqcV1FdNSq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1aqiuHptWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1an1dzVjWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atXN1xlRWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWpdd1V3WrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1c7XE1q1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atSq72rmtWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWqtrzuk1q1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWotekU7rVq1atWrVq1atWrVq1atWrVq1atWrVq1atWpNecUwrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVc139atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1c5XFVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1avQKuK1atWrVq1atWrVq1atWrVq1atWrVq1atWqK82pjWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVquK9ArVq1atWrVq1atWrVq1atWrVq1atWrVq1aqyvOq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWqa9OpzWrVq1atWrVq1atWrVq1atWrVq1atWrVq5SuSrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atXcV0FatWrVq1atWrVq1atWrVq1atWrVq1atWrgqpK1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrV01dlWrVq1atWrVq1atWrVq1atWrVq1atWrVq81pjWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1armu/rVq1atWrVq1atWrVq1atWrVq1atWrVq1eV0OtWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1P69JrVq1atWrVq1atWrVq1atWrVq1atWrVqTXlNatWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1Oa9PrVq1atWrVq1atWrVq1atWrVq1atWrVqDXltatWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1Fr1OtWrVq1atWrVq1atWrVq1atWrVq1atWptXmFatWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1Kr1atWrVq1atWrVq1atWrVq1atWrVq1atWppXmVatWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1avWK1atWrVq1atWrVq1atWrVq1atWrVq1amleZVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq9YrVq1atWrVq1atWrVq1atWrVq1atWrVqaV5lWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWr1itWrVq1atWrVq1atWrVq1atWrVq1atWppXmVatWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1avWK1atWrVq1atWrVq1atWrVq1atWrVq1amleZVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq9YrVq1atWrVq1atWrVq1atWrVq1atWrVqaV5lWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWr1itWrVq1atWrVq1atWrVq1atWrVq1atWppXmVatWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1avWK1atWrVq1atWrVq1atWrVq1atWrVq1amleZVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq9YrVq1atWrVq1atWrVq1atWrVq1atWrVqaV5lWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWr1itWrVq1atWrVq1atWrVq1atWrVq1atWppXmVatWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1avWK1atWrVq1atWrVq1atWrVq1atWrVq1amleZVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq9YrVq1atWrVq1atWrVq1atWrVq1atWrVqaV5lWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWr1itWrVq1atWrVq1atWrVq1atWrVq1atWppXmVatWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1avWK1atWrVq1atWrVq1atWrVq1atWrVq1amleZVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq9YrVq1atWrVq1atWrVq1atWrVq1atWrVqaV5lWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWr1itWrVq1atWrVq1atWrVq1atWrVq1atWppXmVatWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1avWK1atWrVq1atWrVq1atWrVq1atWrVq1amleZVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq9YrVq1atWrVq1atWrVq1atWrVq1atWrVqaV5lWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWr1itWrVq1atWrVq1atWrVq1atWrVq1atWppXmVatWrVq1atWrVq1atWrVq1at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AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEkEEEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAEgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAEgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAkAAAAAAAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEgAAAAAAAEgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAggAAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAkkEEEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAkgAAAAAAAAAAAAAAEEAAAAAAAAAAAAAAAAAAAAAAAAEkAAAAAEkgAAAAEAAAAAEkkAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAgEEkEAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAEgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAEgAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA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" 
+                     {% endif %} />
+              </span>
+                {% if block.settings.author_rev %}
+                  <span class="quote-name">
+                    <img width="100" style="margin: auto" src="{{ block.settings.author_rev | img_url : 'master' }}">
+                  </span>
+                {% endif %}
+                {% if block.settings.quote_date != blank %}
+                  <span class="date"><p>{{ block.settings.quote_date }}</p></span>
+                {% endif %}
+                {% if block.settings.quote_name != blank %}
+                  <span class="quote-heading">
+                    <h4>{{ block.settings.quote_name }}</h4>
+                  </span>
+                {% endif %}
+              {% if block.settings.quote != blank %}
+                <div class="rte-setting rte">{{ block.settings.quote }}</div>
+              {% endif %}
+              {% if block.settings.author != blank %}
+                <cite>{{ block.settings.author | escape }}</cite>
+              {% endif %}
+              {% if block.settings.quote_days != blank %}
+                  <span class="date"><p>{{ block.settings.quote_days }}</p></span>
+              {% endif %}
+            </blockquote>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  {% endif %}
+  {% if section.settings.imgg %}
+  <div class="img"style="text-align: center;">
+  	<img width="150" height="75" style="margin: auto;object-fit: cover" src="{{ section.settings.imgg | img_url: 'master' }}" />
+  </div>
+  {% endif %}
+  {% if section.blocks.size == 0 %}
+    {% include 'no-blocks' %}
+  {% endif %}
+</div>
+
+
+
+{% schema %}
+{
+  "name": {
+    "da": "Udtalelser",
+    "de": "Testimonials",
+    "en": "Testimonials",
+    "es": "Testimonios",
+    "fi": "Suositukset",
+    "fr": "Témoignages",
+    "hi": "प्रमाणपत्र",
+    "it": "Testimonial",
+    "ja": "お客様の声",
+    "ko": "추천",
+    "ms": "Testimoni",
+    "nb": "Tilbakemeldinger fra kunder",
+    "nl": "Getuigenissen",
+    "pt-BR": "Depoimentos",
+    "pt-PT": "Depoimentos",
+    "sv": "Kundberättelser",
+    "th": "เสียงชื่นชมจากลูกค้า",
+    "zh-CN": "感言",
+    "zh-TW": "推薦文"
+  },
+  "class": "index-section",
+  "max_blocks": 9,
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": {
+        "da": "Overskrift",
+        "de": "Titel",
+        "en": "Heading",
+        "es": "Título",
+        "fi": "Otsake",
+        "fr": "En-tête",
+        "hi": "शीर्षक",
+        "it": "Heading",
+        "ja": "見出し",
+        "ko": "제목",
+        "ms": "Tajuk",
+        "nb": "Overskrift",
+        "nl": "Kop",
+        "pt-BR": "Título",
+        "pt-PT": "Título",
+        "sv": "Rubrik",
+        "th": "ส่วนหัว",
+        "zh-CN": "标题",
+        "zh-TW": "標題"
+      },
+      "default": {
+        "da": "Udtalelser",
+        "de": "Testimonials",
+        "en": "Testimonials",
+        "es": "Testimonios",
+        "fi": "Suositukset",
+        "fr": "Témoignages",
+        "hi": "प्रमाणपत्र",
+        "it": "Testimonial",
+        "ja": "お客様の声",
+        "ko": "추천",
+        "ms": "Testimoni",
+        "nb": "Tilbakemeldinger fra kunder",
+        "nl": "Getuigenissen",
+        "pt-BR": "Depoimentos",
+        "pt-PT": "Depoimentos",
+        "sv": "Kundberättelser",
+        "th": "เสียงชื่นชมจากลูกค้า",
+        "zh-CN": "感言",
+        "zh-TW": "推薦文"
+      }
+    },
+{
+      "type": "image_picker",
+      "id": "imgg",
+      "label": {
+        "en": "Trust Image"
+      }
+    }
+  ],
+  "blocks": [
+    {
+      "type": "quote",
+      "name": {
+        "da": "Udtalelse",
+        "de": "Testimonial",
+        "en": "Testimonial",
+        "es": "Testimonio",
+        "fi": "Suositukset",
+        "fr": "Témoignages",
+        "hi": "प्रमाणपत्र",
+        "it": "Testimonial",
+        "ja": "お客様の声",
+        "ko": "추천",
+        "ms": "Testimoni",
+        "nb": "Anbefaling",
+        "nl": "Testimonial",
+        "pt-BR": "Depoimento",
+        "pt-PT": "Testemunho",
+        "sv": "Kundberättelser",
+        "th": "เสียงชื่นชมจากลูกค้า",
+        "zh-CN": "感言",
+        "zh-TW": "推薦文"
+      },
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "quote",
+          "label": {
+            "da": "Tekst",
+            "de": "Text",
+            "en": "Text",
+            "es": "Texto",
+            "fi": "Teksti",
+            "fr": "Texte",
+            "hi": "टेक्स्ट",
+            "it": "Testo",
+            "ja": "テキスト",
+            "ko": "텍스트",
+            "ms": "Teks",
+            "nb": "Tekst",
+            "nl": "Tekst",
+            "pt-BR": "Texto",
+            "pt-PT": "Texto",
+            "sv": "Text",
+            "th": "ข้อความ",
+            "zh-CN": "文本",
+            "zh-TW": "文字"
+          },
+          "default": {
+            "da": "<p>Tilføj kundeanmeldelser og udtalelser for at fremhæve din butiks tilfredse kunder.</p>",
+            "de": "<p>Kunden-Reviews und Testimonials, die Kundenzufriedenheit beweisen.</p>",
+            "en": "<p>Add customer reviews and testimonials to showcase your store’s happy customers.</p>",
+            "es": "<p>Agrega las reseñas y los testimonios de los clientes para mostrar a los clientes satisfechos de tu tienda.</p>",
+            "fi": "<p>Lisää asiakasarviointeja ja suositteluja esimerkeiksi myymäläsi tyytyväisistä asiakkaista.</p>",
+            "fr": "<p>Ajoutez des avis et témoignages pour mettre en avant vos clients satisfaits.</p>",
+            "hi": "<p>अपने स्टोर के खुश ग्राहकों को दिखाने के लिए ग्राहक समीक्षा और प्रशंसापत्र जोड़ें.</p>",
+            "it": "<p>Aggiungi recensioni e testimonianze sul tuo negozio per dimostrare che i clienti sono soddisfatti.</p>",
+            "ja": "<p>あなたのストアの幸せなお客様を紹介するために、カスタマーレビューとお客様の声を追加してください。</p>",
+            "ko": "<p>고객 리뷰 및 추천을 추가하여 스토어에 만족한 고객을 보여주십시오.</p>",
+            "ms": "<p>Tambah ulasan pelanggan dan testimoni untuk menunjukkan pelanggan gembira kedai anda.</p>",
+            "nb": "<p>Legg til kundeomtaler og anbefalinger for å vise frem butikkens glade kunder.</p>",
+            "nl": "<p>Voeg beoordelingen van klanten en testimonials toe om te laten zien dat je klanten tevreden zijn.</p>",
+            "pt-BR": "<p>Adicione comentários e depoimentos de clientes para destacar os clientes felizes da sua loja.</p>",
+            "pt-PT": "<p>Adicione análises e testemunhos de clientes felizes da sua loja.</p>",
+            "sv": "<p>Lägg till kundrecensioner och berättelser för att visa upp din butiks nöjda kunder.</p>",
+            "th": "<p>เพิ่มรีวิวและเสียงชื่นชมจากลูกค้าเพื่อนำเสนอลูกค้าที่ได้รับความพึงพอใจจากร้านค้า</p>",
+            "zh-CN": "<p>添加客户评论和感言，以展示对您的商店满意的客户。</p>",
+            "zh-TW": "<p>新增客戶評論和推薦文，展示對您商店滿意之客戶。</p>"
+          }
+        },
+  		{
+          "type": "text",
+          "id": "quote_name",
+          "label": {
+            "en": "Heading"
+          }
+        },
+  		{
+          "type": "text",
+          "id": "quote_date",
+          "label": {
+            "en": "Date"
+          }
+        },
+		{
+          "type": "text",
+          "id": "quote_days",
+          "label": {
+            "en": "Days"
+          }
+        },
+		{
+          "type": "image_picker",
+          "id": "author_rev",
+          "label": {
+            "en": "Reviews Image"
+          }
+        },
+		{
+          "type": "image_picker",
+          "id": "author_img",
+          "label": {
+            "en": "Image"
+          }
+        },
+		{
+          "type": "image_picker",
+          "id": "trust_img",
+          "label": {
+            "en": "Trust Image"
+          }
+        },
+        {
+          "type": "text",
+          "id": "author",
+          "label": {
+            "da": "Forfatter",
+            "de": "Autor",
+            "en": "Author",
+            "es": "Autor",
+            "fi": "Kirjoittaja",
+            "fr": "Auteur",
+            "hi": "लेखक",
+            "it": "Autore",
+            "ja": "執筆者",
+            "ko": "작성자",
+            "ms": "Pengarang",
+            "nb": "Forfatter",
+            "nl": "Auteur",
+            "pt-BR": "Autoria",
+            "pt-PT": "Autoria",
+            "sv": "Upphovsman",
+            "th": "ผู้เขียน",
+            "zh-CN": "作者",
+            "zh-TW": "作者"
+          },
+          "default": {
+            "da": "Forfatterens navn",
+            "de": "Name des Autors",
+            "en": "Author's name",
+            "es": "Nombre del autor",
+            "fi": "Kirjoittajan nimi",
+            "fr": "Nom de l'auteur",
+            "hi": "लेखक का नाम",
+            "it": "Nome dell'autore",
+            "ja": "筆者の名前",
+            "ko": "작성자 이름",
+            "ms": "Nama pengarang",
+            "nb": "Forfatterens navn",
+            "nl": "Naam auteur",
+            "pt-BR": "Nome do(a) autor(a)",
+            "pt-PT": "Nome do autor",
+            "sv": "Författarens namn",
+            "th": "ชื่อผู้เขียน",
+            "zh-CN": "作者姓名",
+            "zh-TW": "作者名稱"
+          }
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": {
+        "da": "Udtalelser",
+        "de": "Testimonials",
+        "en": "Testimonials",
+        "es": "Testimonios",
+        "fi": "Suositukset",
+        "fr": "Témoignages",
+        "hi": "प्रमाणपत्र",
+        "it": "Testimonial",
+        "ja": "お客様の声",
+        "ko": "추천",
+        "ms": "Testimoni",
+        "nb": "Tilbakemeldinger fra kunder",
+        "nl": "Getuigenissen",
+        "pt-BR": "Depoimentos",
+        "pt-PT": "Depoimentos",
+        "sv": "Kundberättelser",
+        "th": "เสียงชื่นชมจากลูกค้า",
+        "zh-CN": "感言",
+        "zh-TW": "推薦文"
+      },
+      "category": {
+        "da": "Tekst",
+        "de": "Text",
+        "en": "Text",
+        "es": "Texto",
+        "fi": "Teksti",
+        "fr": "Texte",
+        "hi": "टेक्स्ट",
+        "it": "Testo",
+        "ja": "テキスト",
+        "ko": "텍스트",
+        "ms": "Teks",
+        "nb": "Tekst",
+        "nl": "Tekst",
+        "pt-BR": "Texto",
+        "pt-PT": "Texto",
+        "sv": "Text",
+        "th": "ข้อความ",
+        "zh-CN": "文本",
+        "zh-TW": "文字"
+      },
+      "blocks": [
+        {
+          "type": "quote"
+        },
+        {
+          "type": "quote"
+        },
+        {
+          "type": "quote"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

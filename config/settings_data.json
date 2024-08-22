@@ -1,0 +1,950 @@
+{
+  "current": {
+    "color_text": "#000000",
+    "link_color_text": "#175d35",
+    "menu_color_text": "#000000",
+    "color_body_text": "#000000",
+    "color_sale_text": "#175d35",
+    "color_button": "#175d35",
+    "color_button_text": "#ffffff",
+    "color_small_button_text_border": "#5a777c",
+    "color_text_field_text": "#000",
+    "color_text_field_border": "#949494",
+    "color_text_field": "#ffffff",
+    "color_image_overlay_text": "#fff",
+    "color_image_overlay": "#3d4246",
+    "image_overlay_opacity": 40,
+    "color_borders": "#e8e9eb",
+    "color_body_bg": "#ffffff",
+    "type_header_font": "playfair_display_n7",
+    "type_header_base_size": 24,
+    "bold_main_menu": false,
+    "type_base_font": "assistant_n4",
+    "type_base_size": 16,
+    "type_bold_product_titles": false,
+    "share_image": "shopify:\/\/shop_images\/Icon-03.png",
+    "share_facebook": true,
+    "share_twitter": true,
+    "share_pinterest": true,
+    "social_twitter_link": "",
+    "social_facebook_link": "https:\/\/www.facebook.com\/sunvalleysaunas",
+    "social_pinterest_link": "https:\/\/pinterest.com\/sunvalleysaunas",
+    "social_instagram_link": "https:\/\/www.instagram.com\/sunvalleysaunas",
+    "social_tumblr_link": "",
+    "social_snapchat_link": "",
+    "social_youtube_link": "https:\/\/www.youtube.com\/channel\/UCqZF1FYpMRVSDI3o5iVG-XQ",
+    "social_vimeo_link": "",
+    "favicon": "shopify:\/\/shop_images\/Icon-03.png",
+    "enable_ajax": true,
+    "checkout_header_image": "",
+    "checkout_logo_image": "shopify:\/\/shop_images\/Logo_7794e037-2f4a-4f4c-b289-027ce9d4602f.png",
+    "checkout_logo_position": "left",
+    "checkout_logo_size": "large",
+    "checkout_body_background_image": "",
+    "checkout_body_background_color": "#fff",
+    "checkout_input_background_color_mode": "white",
+    "checkout_sidebar_background_image": "",
+    "checkout_sidebar_background_color": "#fafafa",
+    "checkout_heading_font": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
+    "checkout_body_font": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
+    "checkout_accent_color": "#175d35",
+    "checkout_button_color": "#175d35",
+    "checkout_error_color": "#e32c2b",
+    "footer_link_color": "#e8e9eb",
+    "sections": {
+      "header": {
+        "type": "header",
+        "settings": {
+          "logo": "shopify:\/\/shop_images\/Logo.png",
+          "logo_max_width": 140,
+          "contact_text": "Got a Question? Ask a Sauna Expert",
+          "phone_text": "1-855-963-5665",
+          "hours_text": "Weekdays 9am-5pm MST",
+          "main_linklist": "main-menu",
+          "message": true,
+          "home_page_only": false,
+          "message_text": "FREE SHIPPING & 30 DAY MONEYBACK GUARANTEE ON ALL ORDERS",
+          "message_link": "shopify:\/\/collections\/all",
+          "color_bg": "#175d35",
+          "color_text": "#fafafa"
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "blocks": {
+          "1566317717526": {
+            "type": "link_list",
+            "settings": {
+              "title": "Our Products",
+              "menu": "footer"
+            }
+          },
+          "link_list": {
+            "type": "link_list",
+            "settings": {
+              "title": "Quick links",
+              "menu": "quick-links"
+            }
+          },
+          "text": {
+            "type": "text",
+            "settings": {
+              "title": "Contact Us",
+              "text": "<p><a href=\"mailto:info@sunvalleysaunas.com\" title=\"mailto:info@sunvalleysaunas.com\">info@sunvalleysaunas.com<\/a><\/p><p>Weekdays 9am - 6pm MST<\/p><p><a href=\"tel:+18559635665\" title=\"tel:+18559635665\">1-855-963-5665<\/a><\/p><p>400 Sun Valley Road, Ste. G          <br\/>Ketchum, ID 83340<\/p>",
+              "footer_page": "shopify:\/\/shop_images\/Icon-03.png",
+              "footer_page_max_width": "45"
+            }
+          },
+          "newsletter": {
+            "type": "newsletter",
+            "settings": {
+              "title": "Newsletter",
+              "newsletter_text": "Sign up now for discounts, offers and sauna news!"
+            }
+          }
+        },
+        "block_order": [
+          "1566317717526",
+          "link_list",
+          "text",
+          "newsletter"
+        ],
+        "settings": {
+          "show_payment_icons": true,
+          "color_footer_bg": "#000000",
+          "color_footer_text": "#e8e9eb"
+        }
+      },
+      "cart-template": {
+        "type": "cart-template",
+        "settings": {
+          "cart_ajax_enable": true,
+          "cart_notes_enable": false
+        }
+      },
+      "1566322931771": {
+        "type": "featured-blog",
+        "settings": {
+          "title": "The sauna blog",
+          "blog": "the-sauna-blog",
+          "post_limit": 3,
+          "blog_show_author": false,
+          "blog_show_date": true,
+          "show_view_all": true
+        }
+      },
+      "1566322944679": {
+        "type": "collection",
+        "settings": {
+          "title": "Our Best Selling Saunas",
+          "collection": "best-sellers",
+          "grid": 4,
+          "rows": 1,
+          "show_vendor": true,
+          "show_view_all": false
+        }
+      },
+      "1566322970694": {
+        "type": "collection-list",
+        "blocks": {
+          "featured_collection_qEBw3W": {
+            "type": "featured_collection",
+            "settings": {
+              "collection": "best-sellers"
+            }
+          },
+          "1566322970694-1": {
+            "type": "featured_collection",
+            "settings": {
+              "collection": "infrared-saunas"
+            }
+          },
+          "1566322970694-0": {
+            "type": "featured_collection",
+            "settings": {
+              "collection": "outdoor-saunas"
+            }
+          },
+          "1566322970694-2": {
+            "type": "featured_collection",
+            "settings": {
+              "collection": "2-person-saunas"
+            }
+          }
+        },
+        "block_order": [
+          "featured_collection_qEBw3W",
+          "1566322970694-1",
+          "1566322970694-0",
+          "1566322970694-2"
+        ],
+        "settings": {
+          "title": "choose your sauna",
+          "grid": 4
+        }
+      },
+      "1566322988379": {
+        "type": "slideshow",
+        "blocks": {
+          "592a422d-1538-479e-9b54-56721280ce3e": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Mountain_and_Sauna_Homeslide_My_Friend.png",
+              "alignment": "center center",
+              "slide_title": "",
+              "subheading": "",
+              "button_label": "",
+              "button_link": "shopify:\/\/collections\/traditional-saunas"
+            }
+          }
+        },
+        "block_order": [
+          "592a422d-1538-479e-9b54-56721280ce3e"
+        ],
+        "settings": {
+          "slideshow_height": "adapt",
+          "text_size": "medium",
+          "text_alignment": "center center",
+          "show_overlay": false,
+          "autorotate": true,
+          "autorotate_speed": 7
+        }
+      },
+      "1566323018031": {
+        "type": "quotes",
+        "blocks": {
+          "1566323018031-0": {
+            "type": "quote",
+            "disabled": true,
+            "settings": {
+              "quote": "<p>Excellent customer service. Great pricing and the Huum Drop 6 with UKU wifi controller is amazing. 100% recommend<\/p>",
+              "quote_name": "Excellent customer service",
+              "quote_date": "",
+              "quote_days": "10 days ago.",
+              "author_rev": "shopify:\/\/shop_images\/563-5633714_5-stars-png-black-reviews-co-uk-stars-removebg-preview.png",
+              "author_img": "shopify:\/\/shop_images\/Component_12_1.png",
+              "trust_img": "shopify:\/\/shop_images\/image_15.png",
+              "author": "Shawn Holiday"
+            }
+          },
+          "1566323018031-1": {
+            "type": "quote",
+            "disabled": true,
+            "settings": {
+              "quote": "<p>After a small issue with the description, Wes acted like a star to fix things and make it right. Superb customer service. Great sauna and easy to build…..<\/p>",
+              "quote_name": "After a small issue with the…",
+              "quote_date": "",
+              "quote_days": "14 days ago",
+              "author_rev": "shopify:\/\/shop_images\/563-5633714_5-stars-png-black-reviews-co-uk-stars-removebg-preview.png",
+              "author_img": "shopify:\/\/shop_images\/Component_10_1.png",
+              "trust_img": "shopify:\/\/shop_images\/image_15.png",
+              "author": "David Alan"
+            }
+          },
+          "1566323018031-2": {
+            "type": "quote",
+            "disabled": true,
+            "settings": {
+              "quote": "<p>I have to say that the Sauna we purchase is high quality and just wonderful. It was very easy to assemble. The person we hired actually showed us how to take it apart if we ever needed to move it. Sun valley customer service is amazing.<\/p>",
+              "quote_name": "Beautiful Sauna",
+              "quote_date": "",
+              "quote_days": "30 days ago",
+              "author_rev": "shopify:\/\/shop_images\/563-5633714_5-stars-png-black-reviews-co-uk-stars-removebg-preview.png",
+              "author_img": "shopify:\/\/shop_images\/Component_11_1.png",
+              "trust_img": "shopify:\/\/shop_images\/image_15.png",
+              "author": "Alexa Macmullen"
+            }
+          }
+        },
+        "block_order": [
+          "1566323018031-0",
+          "1566323018031-1",
+          "1566323018031-2"
+        ],
+        "disabled": true,
+        "settings": {
+          "title": "",
+          "imgg": "shopify:\/\/shop_images\/image_15.png"
+        }
+      },
+      "product-template": {
+        "type": "product-template",
+        "settings": {
+          "image_size": "medium",
+          "show_quantity_selector": true,
+          "show_variant_labels": true,
+          "show_vendor": true,
+          "enable_zoom": true,
+          "enable_payment_button": true,
+          "show_share_buttons": false,
+          "expiring_coupon_text": "TAKE AN ADDITIONAL 5% OFF WITH CODE SUMMERSAUNA",
+          "logos": "shopify:\/\/shop_images\/van-cargo_3.png",
+          "first-content": "<b>Free Shipping<\/b>",
+          "logos-cont": "shopify:\/\/shop_images\/money_2.png",
+          "second-content": "<b>100% Price Match Guarantee<\/b>",
+          "logos-cint": "shopify:\/\/shop_images\/verified_1.png",
+          "third-content": "<b>Secure Checkout<\/b>",
+          "expiring_day": "2",
+          "show_eta": true,
+          "early_delivery": "5",
+          "late_delivery": "7",
+          "country_eta": "",
+          "shipping_text": "<b>Shipping & Returns:<\/b> FREE SHIPPING.  30 Day Moneyback Guarantee.",
+          "product_page_max_width": "100",
+          "product_reviews_enable": false
+        }
+      },
+      "product-recommendations": {
+        "type": "product-recommendations",
+        "settings": {
+          "show_product_recommendations": false,
+          "heading": "You may also like",
+          "show_vendor": true
+        }
+      },
+      "collection-template": {
+        "type": "collection-template",
+        "blocks": {
+          "1566331128738": {
+            "type": "vendors",
+            "settings": {
+              "title": "Brands"
+            }
+          },
+          "tag_list_rBHpfG": {
+            "type": "tag-list",
+            "settings": {
+              "title": "Collection",
+              "tags": "Electric Sauna Heater,Electric Heater,Outdoor Sauna Cabin, Bluetooth,dry sauna,Traditional Sauna"
+            }
+          }
+        },
+        "block_order": [
+          "1566331128738",
+          "tag_list_rBHpfG"
+        ],
+        "settings": {
+          "layout": "grid",
+          "grid": 3,
+          "rows": 8,
+          "show_collection_image": false,
+          "show_vendor": true,
+          "sort_enable": true,
+          "tags_enable": true,
+          "show_sidebar": true
+        }
+      },
+      "recently-viewed-products": {
+        "type": "recently-viewed-products",
+        "settings": {
+          "show_recently_viewed_products": true,
+          "title": "Recently Viewed Products"
+        }
+      },
+      "article-template": {
+        "type": "article-template",
+        "settings": {
+          "blog_show_author": true,
+          "blog_show_date": true,
+          "show_share_buttons": true
+        }
+      },
+      "16143570908391507a": {
+        "type": "collection",
+        "settings": {
+          "title": "explore our barrel saunas",
+          "collection": "barrel-saunas",
+          "grid": 4,
+          "rows": 1,
+          "show_vendor": true,
+          "show_view_all": false
+        }
+      },
+      "blog-template": {
+        "type": "blog-template",
+        "settings": {
+          "layout": "grid",
+          "blog_show_author": true,
+          "blog_show_date": false
+        }
+      },
+      "1642696192aff7fa01": {
+        "type": "quotes",
+        "blocks": {
+          "1642696192aff7fa01-0": {
+            "type": "quote",
+            "settings": {
+              "quote": "<p>Add customer reviews and testimonials to showcase your store’s happy customers.<\/p>",
+              "quote_name": "",
+              "quote_date": "",
+              "quote_days": "",
+              "author": "Author's name"
+            }
+          },
+          "1642696192aff7fa01-1": {
+            "type": "quote",
+            "settings": {
+              "quote": "<p>Add customer reviews and testimonials to showcase your store’s happy customers.<\/p>",
+              "quote_name": "",
+              "quote_date": "",
+              "quote_days": "",
+              "author": "Author's name"
+            }
+          },
+          "1642696192aff7fa01-2": {
+            "type": "quote",
+            "settings": {
+              "quote": "<p>Add customer reviews and testimonials to showcase your store’s happy customers.<\/p>",
+              "quote_name": "",
+              "quote_date": "",
+              "quote_days": "",
+              "author": "Author's name"
+            }
+          }
+        },
+        "block_order": [
+          "1642696192aff7fa01-0",
+          "1642696192aff7fa01-1",
+          "1642696192aff7fa01-2"
+        ],
+        "disabled": true,
+        "settings": {
+          "title": "Testimonials"
+        }
+      },
+      "1643003457b41f4195": {
+        "type": "sun_reviews_section",
+        "blocks": {
+          "2a335096-94f1-447b-b553-1e39e48b0c29": {
+            "type": "Review_Home",
+            "settings": {
+              "upper_block_img": "shopify:\/\/shop_images\/153-1534091_send-icon-trustpilot-5-stars-hd-png-download.png",
+              "review_date": "Apr 6, 2022",
+              "review_title": "Gave this sauna as a wedding gift...",
+              "review_description": "Gave this sauna as a wedding gift to two very dear friends because they deserved something much nicer than a toaster. Shipped fast, easy delivery, very carefully packed! They unpacked it as per the online videos & it was easy for them to assemble and use the very same day. They absolutely love it!! We’re happy to give them a wonderful gift. Intuitive controls, easy to operate & heats up fast. Very pleased with our gift purchase & now we want one!",
+              "review_by": "Gretchen"
+            }
+          },
+          "a788f7b8-1731-42cd-a14a-6f5b98a49cae": {
+            "type": "Review_Home",
+            "settings": {
+              "upper_block_img": "shopify:\/\/shop_images\/153-1534091_send-icon-trustpilot-5-stars-hd-png-download.png",
+              "review_date": "Mar 30, 2022",
+              "review_title": "Excellent Product",
+              "review_description": "Excellent product, Very responsive customer service department. Recommend with no reservations",
+              "review_by": "Mark S Zweben Construction Management"
+            }
+          },
+          "00ca2686-18c5-4371-980b-cc272f277dd5": {
+            "type": "Review_Home",
+            "settings": {
+              "upper_block_img": "shopify:\/\/shop_images\/153-1534091_send-icon-trustpilot-5-stars-hd-png-download.png",
+              "review_date": "Mar 29, 2022",
+              "review_title": "We had wanted a sauna for a long time",
+              "review_description": "We had wanted a sauna for a long time. We did a lot of research and this was the one we decided on. Dynamic Saunas Low EMF Far Infrared Sauna DYN-6306-02, Bellagio Edition × 1. It arrived sooner that what we thought. The delivery guy was able to put it in our garage. Amazed at how well it was packaged and the quality of it. It took about 3 hours for my husband and me to set it up. We did have a small problem with the outlet we wanted to use, but after that we fixed it, we plugged it in and have been enjoying it every evening since. So happy we bought this sauna. Oh, I had many questions before purchasing and customer service was just amazing and patient with me. :-)",
+              "review_by": "Lorraine"
+            }
+          },
+          "10e09ce7-468b-4a74-945b-f8412d825a24": {
+            "type": "Review_Home",
+            "settings": {
+              "upper_block_img": "shopify:\/\/shop_images\/153-1534091_send-icon-trustpilot-5-stars-hd-png-download.png",
+              "review_date": "Mar 24, 2022",
+              "review_title": "Great place",
+              "review_description": "Great place, I will definitely go back",
+              "review_by": "Shawn Houston"
+            }
+          },
+          "5300bb24-45e0-42c5-98cb-2cb9196d74da": {
+            "type": "Review_Home",
+            "settings": {
+              "upper_block_img": "shopify:\/\/shop_images\/153-1534091_send-icon-trustpilot-5-stars-hd-png-download.png",
+              "review_date": "Mar 24, 2022",
+              "review_title": "SunValley is great",
+              "review_description": "Wes, the owner, went out of his obligations and fixed issues we had caused by the manufacturer when I was delivered a faulty sauna. Sun Valley Saunas is a trustworthy and honorable business, however I HIGHLY suggest avoiding a purchase from Golden Designs. The sauna was delivered broken and I had to pay someone to fix it and they refused to reimburse me, but Wes did. Thank you!",
+              "review_by": "Melissa"
+            }
+          },
+          "35679353-165b-4a47-bfb3-e19755ecdb4d": {
+            "type": "Review_Home",
+            "settings": {
+              "upper_block_img": "shopify:\/\/shop_images\/153-1534091_send-icon-trustpilot-5-stars-hd-png-download.png",
+              "review_date": "Mar 11, 2022",
+              "review_title": "Well made sauna",
+              "review_description": "Well made sauna. Customer service was good. Our delivery was on time. Very happy with our purchase.",
+              "review_by": "James Scarborough"
+            }
+          }
+        },
+        "block_order": [
+          "2a335096-94f1-447b-b553-1e39e48b0c29",
+          "a788f7b8-1731-42cd-a14a-6f5b98a49cae",
+          "00ca2686-18c5-4371-980b-cc272f277dd5",
+          "10e09ce7-468b-4a74-945b-f8412d825a24",
+          "5300bb24-45e0-42c5-98cb-2cb9196d74da",
+          "35679353-165b-4a47-bfb3-e19755ecdb4d"
+        ],
+        "disabled": true,
+        "settings": {
+          "review_header": "OUR CUSTOMERS LOVE US!",
+          "review_footer": "Rated <b>4.4 \/ 5<\/b> based on 74 reviews.",
+          "footer_img": "shopify:\/\/shop_images\/Trustpilot_logo_32b94b7a-a61f-4097-954f-ebdf778fea2b.png"
+        }
+      },
+      "list-collections-template": {
+        "type": "list-collections-template",
+        "settings": {
+          "display_type": "all",
+          "sort": "alphabetical",
+          "grid": 3
+        }
+      },
+      "d8ed1e84-f3e3-495d-b0ba-c304f9e0d8c1": {
+        "type": "review_carousel",
+        "settings": {}
+      },
+      "swiper-logo-bar": {
+        "type": "swiper-logo-bar",
+        "blocks": {
+          "logo_image-3": {
+            "type": "logo_image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/wsj-logo-nobg.png",
+              "link": ""
+            }
+          },
+          "logo_image_3nFTUB": {
+            "type": "logo_image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/us_news_sun_valley_saunas.png",
+              "link": ""
+            }
+          },
+          "logo_image-1": {
+            "type": "logo_image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/mindbodygreen-logo.jpg",
+              "link": ""
+            }
+          },
+          "logo_image-2": {
+            "type": "logo_image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/daily-mom-logo-nobg.png",
+              "link": ""
+            }
+          },
+          "logo_image-4": {
+            "type": "logo_image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/gear-patrol-logo-nobg.png",
+              "link": ""
+            }
+          }
+        },
+        "block_order": [
+          "logo_image-3",
+          "logo_image_3nFTUB",
+          "logo_image-1",
+          "logo_image-2",
+          "logo_image-4"
+        ],
+        "custom_css": [
+          ".mobile-view-logo {--swiper-scrollbar-size: 2px;}"
+        ],
+        "settings": {
+          "title": "Sun Valley Saunas featured in...",
+          "background": "rgba(0,0,0,0)"
+        }
+      },
+      "rich_text_Kh7BrU": {
+        "type": "rich-text",
+        "custom_css": [
+          "h1 {font-size: 2em;}"
+        ],
+        "settings": {
+          "full_width": false,
+          "section_title": "",
+          "text": "<h1>Shop Premium Saunas Online<\/h1><p>Sun Valley Saunas is your go-to online store for high quality saunas, heaters and accessories. We're proud to be an authorized dealer for leading brands like SaunaLife, Golden Designs, Auroom, and many others. Dive into our collection and find the perfect fit for your relaxation needs!<\/p>",
+          "text_size": "large"
+        }
+      }
+    },
+    "content_for_index": [
+      "1566322988379",
+      "rich_text_Kh7BrU",
+      "1566322970694",
+      "swiper-logo-bar",
+      "1566322944679",
+      "d8ed1e84-f3e3-495d-b0ba-c304f9e0d8c1",
+      "1643003457b41f4195",
+      "16143570908391507a",
+      "1566323018031",
+      "1566322931771",
+      "1642696192aff7fa01"
+    ],
+    "blocks": {
+      "855628211100114053": {
+        "type": "shopify:\/\/apps\/klaviyo-email-marketing-sms\/blocks\/klaviyo-onsite-embed\/2632fe16-c075-4321-a88b-50b567f42507",
+        "disabled": false,
+        "settings": {}
+      },
+      "6143736321357441667": {
+        "type": "shopify:\/\/apps\/tidio-live-chat-chatbots\/blocks\/app-embed\/1002274d-fb18-4939-98f6-5f05a8deeadc",
+        "disabled": false,
+        "settings": {}
+      },
+      "12120936241911852800": {
+        "type": "shopify:\/\/apps\/judge-me-product-reviews\/blocks\/reviews_tab\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+        "disabled": true,
+        "settings": {
+          "position": "right"
+        }
+      },
+      "14060646107696862457": {
+        "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/judgeme_core\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+        "disabled": false,
+        "settings": {}
+      },
+      "15804833573597976398": {
+        "type": "shopify:\/\/apps\/d3566c6e-opensend\/blocks\/opensend\/f87627f9-2449-41b8-ad6e-9a2628d801ee",
+        "disabled": false,
+        "settings": {}
+      }
+    }
+  },
+  "presets": {
+    "Default": {
+      "color_text": "#3d4246",
+      "color_body_text": "#69727b",
+      "color_sale_text": "#557B97",
+      "color_borders": "#e8e9eb",
+      "color_button": "#557B97",
+      "color_button_text": "#fff",
+      "color_small_button_text_border": "#3d4246",
+      "color_text_field": "#fff",
+      "color_text_field_text": "#000",
+      "color_text_field_border": "#949494",
+      "color_image_overlay_text": "#fff",
+      "color_image_overlay": "#3d4246",
+      "image_overlay_opacity": 40,
+      "color_body_bg": "#fff",
+      "type_header_font": "work_sans_n6",
+      "type_header_base_size": 26,
+      "type_base_font": "work_sans_n4",
+      "type_base_size": 16,
+      "type_bold_product_titles": false,
+      "share_facebook": true,
+      "share_twitter": true,
+      "share_pinterest": true,
+      "sections": {
+        "header": {
+          "type": "header",
+          "settings": {}
+        },
+        "hero": {
+          "type": "hero",
+          "settings": {
+            "text_size": "large"
+          }
+        },
+        "slideshow": {
+          "type": "slideshow",
+          "blocks": {
+            "slideshow-0": {
+              "type": "image",
+              "settings": {}
+            },
+            "slideshow-1": {
+              "type": "image",
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "slideshow-0",
+            "slideshow-1"
+          ],
+          "settings": {}
+        },
+        "featured-collections": {
+          "type": "collection",
+          "settings": {
+            "collection": "frontpage"
+          }
+        },
+        "feature-row": {
+          "type": "feature-row",
+          "settings": {}
+        },
+        "footer": {
+          "type": "footer",
+          "blocks": {
+            "link_list": {
+              "type": "link_list",
+              "settings": {}
+            },
+            "text": {
+              "type": "text",
+              "settings": {}
+            },
+            "newsletter": {
+              "type": "newsletter",
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "link_list",
+            "text",
+            "newsletter"
+          ],
+          "settings": {}
+        }
+      },
+      "content_for_index": [
+        "hero",
+        "featured-collections",
+        "feature-row",
+        "slideshow"
+      ]
+    },
+    "Light": {
+      "color_text": "#162950",
+      "color_body_text": "#6d6d6d",
+      "color_sale_text": "#DA2F0C",
+      "color_borders": "#e4e4e4",
+      "color_button": "#DA2F0C",
+      "color_button_text": "#ffffff",
+      "color_small_button_text_border": "#162950",
+      "color_text_field": "#ffffff",
+      "color_text_field_text": "#162950",
+      "color_text_field_border": "#909090",
+      "color_image_overlay_text": "#ffffff",
+      "color_image_overlay": "#3d3d3d",
+      "image_overlay_opacity": 40,
+      "color_body_bg": "#f8f8f8",
+      "type_header_font": "muli_n6",
+      "type_header_base_size": 26,
+      "type_base_font": "muli_n4",
+      "type_base_size": 18,
+      "type_bold_product_titles": true,
+      "share_facebook": true,
+      "share_twitter": true,
+      "share_pinterest": true,
+      "social_twitter_link": "",
+      "social_facebook_link": "",
+      "social_pinterest_link": "",
+      "social_instagram_link": "",
+      "social_tumblr_link": "",
+      "social_snapchat_link": "",
+      "social_youtube_link": "",
+      "social_vimeo_link": "",
+      "favicon": "",
+      "checkout_header_image": "",
+      "checkout_logo_image": "",
+      "checkout_logo_position": "left",
+      "checkout_logo_size": "small",
+      "checkout_body_background_image": "",
+      "checkout_body_background_color": "#ffffff",
+      "checkout_input_background_color_mode": "white",
+      "checkout_sidebar_background_image": "",
+      "checkout_sidebar_background_color": "#e8f3f6",
+      "checkout_heading_font": "Roboto",
+      "checkout_body_font": "Source Sans Pro",
+      "checkout_accent_color": "#1990c6",
+      "checkout_button_color": "#23314e",
+      "checkout_error_color": "#ff6d6d",
+      "sections": {
+        "header": {
+          "type": "header",
+          "settings": {
+            "logo": "",
+            "logo_max_width": 135,
+            "main_linklist": "main-menu",
+            "message": true,
+            "color_bg": "#162950",
+            "color_text": "#ffffff"
+          }
+        },
+        "hero": {
+          "type": "hero",
+          "settings": {
+            "alignment": "center",
+            "hero_size": "x-large",
+            "text_size": "large"
+          }
+        },
+        "slideshow": {
+          "type": "slideshow",
+          "blocks": {
+            "slideshow-0": {
+              "type": "image",
+              "settings": {
+                "image": "",
+                "alignment": "center center"
+              }
+            },
+            "1492095993817": {
+              "type": "image",
+              "settings": {
+                "image": "",
+                "alignment": "center"
+              }
+            }
+          },
+          "block_order": [
+            "slideshow-0",
+            "1492095993817"
+          ],
+          "settings": {
+            "slideshow_height": "medium",
+            "text_size": "medium",
+            "autorotate": false,
+            "autorotate_speed": 5
+          }
+        },
+        "featured-collections": {
+          "type": "collection",
+          "settings": {
+            "grid": 3,
+            "rows": 1,
+            "show_vendor": true,
+            "show_view_all": true
+          }
+        },
+        "product-template": {
+          "type": "product-template",
+          "settings": {
+            "image_size": "medium",
+            "show_quantity_selector": false,
+            "show_variant_labels": true,
+            "show_vendor": false,
+            "enable_zoom": true,
+            "show_share_buttons": true
+          }
+        },
+        "collection-template": {
+          "type": "collection-template",
+          "settings": {
+            "layout": "grid",
+            "grid": 2,
+            "rows": 2,
+            "show_collection_image": true,
+            "show_vendor": false,
+            "sort_enable": true,
+            "tags_enable": true
+          }
+        },
+        "1492033877875": {
+          "type": "quotes",
+          "blocks": {
+            "1492033877875-0": {
+              "type": "quote",
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "1492033877875-0"
+          ],
+          "settings": {}
+        },
+        "1492033924902": {
+          "type": "custom-content",
+          "blocks": {
+            "1492033924902-0": {
+              "type": "text",
+              "settings": {
+                "width": "100%",
+                "alignment": "center",
+                "align_text": "center"
+              }
+            }
+          },
+          "block_order": [
+            "1492033924902-0"
+          ],
+          "settings": {
+            "title": ""
+          }
+        },
+        "1492096252560": {
+          "type": "collection-list",
+          "blocks": {
+            "1492096252560-0": {
+              "type": "featured_collection",
+              "settings": {}
+            },
+            "1492096252560-1": {
+              "type": "featured_collection",
+              "settings": {}
+            },
+            "1492096252560-2": {
+              "type": "featured_collection",
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "1492096252560-0",
+            "1492096252560-1",
+            "1492096252560-2"
+          ],
+          "settings": {
+            "grid": 3
+          }
+        },
+        "blog-template": {
+          "type": "blog-template",
+          "settings": {
+            "layout": "grid",
+            "blog_show_author": true,
+            "blog_show_date": false
+          }
+        },
+        "article-template": {
+          "type": "article-template",
+          "settings": {
+            "blog_show_author": true,
+            "blog_show_date": true,
+            "show_share_buttons": true
+          }
+        },
+        "cart-template": {
+          "type": "cart-template",
+          "settings": {
+            "cart_notes_enable": false
+          }
+        },
+        "footer": {
+          "type": "footer",
+          "blocks": {
+            "link_list": {
+              "type": "link_list",
+              "settings": {}
+            },
+            "text": {
+              "type": "text",
+              "settings": {}
+            },
+            "newsletter": {
+              "type": "newsletter",
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "link_list",
+            "text",
+            "newsletter"
+          ],
+          "settings": {}
+        }
+      },
+      "content_for_index": [
+        "hero",
+        "featured-collections",
+        "slideshow",
+        "1492033924902",
+        "1492096252560",
+        "1492033877875"
+      ]
+    }
+  }
+}
